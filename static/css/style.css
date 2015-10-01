@@ -2,6 +2,7 @@
 Theme Name: YASimple
 Author: Tanky Woo<me@tankywoo.com>
 Author URI: https://tankywoo.com
+Home Page: https://github.com/tankywoo/yasimple
 Description: Yet another simple theme for simiki.
 Version: 0.1
 License: The MIT License (MIT)
@@ -27,22 +28,18 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", "Segoe UI", Arial, Sans-Serif;
-    line-height: 1.5em;
-    background-color: #95AFBA;
+    /* font-family: "Helvetica Neue", "Segoe UI", Arial, Sans-Serif; */
+    /* font-family: Monaco, 'Courier New', monospace; */
+    background-color: #95afba;
 }
 
-a { color: #1863A1; text-decoration: none; }
-a:visited { color: #1863A1; }
-a:hover { color: #A00; text-decoration: underline; }
-a:active { color: #1863A1; }
+
+a { color: #1863a1; text-decoration: none; }
+a:visited { color: #1863a1; }
+a:hover { color: #a00; text-decoration: underline; }
+a:active { color: #1863a1; }
 
 p { margin: 0 0 1em 0; }
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    margin-bottom: 1em;
-}
 
 blockquote {
     color: #666;
@@ -50,21 +47,6 @@ blockquote {
     padding-left: 1em;
     border-left: 0.3em #eee solid;
 }
-
-/* Gradient transparent - color - transparent
-http://css-tricks.com/examples/hrs/
-*/
-hr {
-    border: 0px;
-    height: 2px;
-    margin: 15px 0;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-}
-
-b, strong { font-weight: bold; }
 
 table {
     border-collapse: collapse;
@@ -80,8 +62,9 @@ td {
 
 /* Optimization for pre and code tag */
 pre, code { 
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 12px;
+    /* font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", Monaco, Andale Mono, "MS Gothic", monospace; */
+    /* font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace; +++++ */
+    font-size: 90%;
     color: #586E75;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -90,7 +73,7 @@ pre, code {
 }
 
 code {
-    background-color: #EEE;
+    background-color: #eee;
     margin: 0 2px;
     padding: 1px 3px;
 }
@@ -109,52 +92,53 @@ pre code {
     border: 0px !important;
     padding: 0;
     color: #000;
-    background-color: #F8F8F8;
+    /* background-color: #f8f8f8; */
 }
 
 /* Custom Configuration */
-#container {
-    width: 60%;
-    max-width: 960px;
-    margin: 0 auto 3em auto;
-    padding: 3em 2em 1.5em 2em;
-    background-color: #FBFFFD;
-    border: 1px solid #eee;
-}
-
-#container a {
-    color: #666;
-    text-decoration: none;
-}
-
-#container a:hover {
-    color: #666;
-    border-bottom: 2px solid #88ACDB;
-}
-
-#nav {
-    position:fixed;
-    left:0;
-    top: 150px;
-    border:0;
-}
-
-#wiki_title, #title {
-    text-align: center;
-    font-size: 2em;
+#header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
     padding-bottom: 10px;
-    margin: 20px 0;
 }
 
-#title {
-    border-bottom: 1px dashed #eee;
+#header a {
+    border-bottom: none;
 }
 
 #footer {
     margin: 10px auto;
-    color: grey;
+    color: #ddd;
     font-size: 80%;
     text-align: center;
+}
+
+#footer p {
+    margin: 0;
+}
+
+#container {
+    width: 60%;
+    max-width: 960px;
+    margin: 0 auto 1em auto;
+    padding: 1em 2em;
+    background-color: #fbfffd;
+    border: 1px solid #eee;
+}
+
+.category_item a {
+    color: #333;
+}
+
+.category_item a:hover {
+    color: #333;
+    border-bottom: 1px dashed #a1a1a1;
+}
+
+#site_title {
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 10px;
 }
 
 li.pagelist {
@@ -166,20 +150,26 @@ li.pagelist {
 }
 
 li.pagelist:before {
-    content: "\0BB \020";
+    /* content: "\0BB \020"; */
 }
 
 .category {
-    float: left;
-    width: 100px;
+    border-top: 1px solid #ccc;
+    padding-top: 1em;
 }
+
+.category_name {
+    float: right;
+    text-align: right;
+    width: 300px;
+    word-wrap: break-word;
+}
+
 .category_list {
     float: left;
 }
 
-#container .category h2{ color: #CCC; }
-
-#content h2 { color: #88ACDB; }
+#container .category h2{ color: #ccc; }
 
 #content img {
     border: 0;
@@ -189,12 +179,20 @@ li.pagelist:before {
     display: block;
 }
 
+#content h2 {
+    font-size: 1.8em;
+}
+
+#content h3 {
+    font-size: 1.4em;
+}
+
 /* Table of Contents */
 .toc {
     margin: 0 0.5em;
     padding: 0.5em 1em;
     border: 1px dashed silver;
-    background-color: #ECF5FF;
+    background-color: #ecf5ff;
     float: right;
     display: block;
     font-size: 75%;
@@ -210,6 +208,10 @@ li.pagelist:before {
 .toc ul {
     margin: 0;
     padding-left: 1.5em;
+}
+
+.toc a{
+    border: none;
 }
 
 /* Hackers */
@@ -231,6 +233,7 @@ li.pagelist:before {
 .hlcodetable .linenodiv pre, .hlcodetable .hlcode pre { margin: 0; border: none; }
 
 .hlcode {
+    /* margin: 0 0 1em 0; */
     margin: 0;
     color: #586E75;
 }
@@ -245,6 +248,10 @@ table.hlcodetable {
 
 .hlcodetable .linenos {
     width: 5%;
+}
+
+.hlcode pre{
+    background-color: #fbfffd;
 }
 
 /* Pygments them, Punctuation and Name */

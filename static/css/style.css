@@ -108,13 +108,19 @@ pre code {
 
 #footer {
     margin: 10px auto;
-    color: #ddd;
+    color: #fbfffd;
     font-size: 80%;
     text-align: center;
 }
 
 #footer p {
     margin: 0;
+}
+
+#footer a, #footer a:visited, #footer a:hover, #footer a:active {
+    color: #fbfffd;
+    border-bottom: 1px dashed #fbfffd;
+    text-decoration: none;
 }
 
 #container {
@@ -124,6 +130,9 @@ pre code {
     padding: 1em 2em;
     background-color: #fbfffd;
     border: 1px solid #eee;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .category_item a {

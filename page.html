@@ -1,10 +1,27 @@
 {% extends "base.html" %}
 
+{% block extra_scripts %}
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script language="javascript" type="text/javascript">
+    var oddClick = true;
+    $(document).ready(function() {
+      $('#toggle-button').click(function() {
+        $('#container').animate({
+          width: oddClick? "100%":"60%",
+        });
+        $(this).text(oddClick? "窄版":"宽版");
+        oddClick = !oddClick;
+      });
+    });
+</script>
+{% endblock %}
+
 {% block title %}{{ page.title }} - {{ site.title }}{% endblock %}
 
 {% block container %}
     <div id="header">
         <div id="post-nav">
+            <div id="toggle-button">宽版</div>
             {% if not default_home_page %}
             <a href="{{ site.root }}/">Home</a>{%- if page.category %} » <a href="{{ site.root }}/#{{ page.category }}">{{ page.category }}</a>
 {%- endif %} » {{ page.title }}

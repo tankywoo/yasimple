@@ -196,6 +196,12 @@ li.pagelist:before {
     font-size: 1.4em;
 }
 
+#toggle-button {
+    float: right;
+    border: 1px solid silver;
+    padding: 0 3px;
+}
+
 /* Table of Contents */
 .toc {
     margin: 0 0.5em;

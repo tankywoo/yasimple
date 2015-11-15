@@ -6,6 +6,10 @@ hr {
   height: 1px;
 }
 
+blockquote {
+  position: static;
+}
+
 .category h2 {
   margin-top: 0;
 }

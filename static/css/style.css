@@ -196,6 +196,16 @@ li.pagelist:before {
     font-size: 1.4em;
 }
 
+#content h2:before, #content h3:before {
+  color: #42b983;
+  margin-right: 0.3em;
+  font-weight: bold;
+}
+
+#content h2:before { content: "##"; }
+
+#content h3:before { content: "###"; }
+
 #toggle-button {
     float: right;
     border: 1px solid silver;
